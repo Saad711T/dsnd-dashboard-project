@@ -5,7 +5,7 @@ import pandas as pd
 # Import dependencies needed for sql execution
 # from the `sql_execution` module
 #### YOUR CODE HERE
-from .sql_execution import QueryMixin
+from .sql_execution import *
 # Define a subclass of QueryBase
 # called Employee
 #### YOUR CODE HERE
