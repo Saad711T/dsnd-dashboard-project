@@ -1,6 +1,6 @@
-
+# Info
+This Project related with Data scientist nanodegree in udacity (nd025)
 # Software Engineering for Data Scientists 
-
 This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
 
 ### Repository Structure
@@ -79,3 +79,5 @@ erDiagram
   employee ||--o{ employee_events : "employee_id"
   notes }o--o{ employee_events : ""
 ```
+## Credits
+This project is edited by : Saad Almalki
