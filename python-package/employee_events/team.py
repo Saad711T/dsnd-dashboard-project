@@ -3,7 +3,7 @@
 from .query_base import QueryBase
 # Import dependencies for sql execution
 #### YOUR CODE HERE
-from .sql_execution import execute_sql, create_connection
+from .sql_execution import *
 import pandas as pd
 # Create a subclass of QueryBase
 # called  `Team`
@@ -71,3 +71,4 @@ class Team(QueryBase):
                     GROUP BY employee_id
                    )
                 """
+        return self.pandas_query(query)

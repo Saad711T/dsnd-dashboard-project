@@ -10,7 +10,7 @@ db_path = Path(__file__).resolve().parent / "employee_events.db"
 
 # OPTION 1: MIXIN
 # Define a class called `QueryMixin`
-class QueryMixin:
+class QueryMixin():
     
     # Define a method named `pandas_query`
     # that receives an sql query as a string
