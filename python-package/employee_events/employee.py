@@ -5,11 +5,11 @@ import pandas as pd
 # Import dependencies needed for sql execution
 # from the `sql_execution` module
 #### YOUR CODE HERE
-from .sql_execution import execute_sql , create_connection
+from .sql_execution import QueryMixin
 # Define a subclass of QueryBase
 # called Employee
 #### YOUR CODE HERE
-class Employee(QueryBase):
+class Employee(QueryBase , QueryMixin):
 
     # Set the class attribute `name`
     # to the string "employee"
@@ -34,8 +34,7 @@ class Employee(QueryBase):
                 SELECT CONCAT(first_name, ' ', last_name) AS full_name, employee_id
                 FROM employee
                 """
-            return execute_sql(query)
-
+            return self.query(query)
     
 
     # Define a method called `username`
@@ -43,7 +42,7 @@ class Employee(QueryBase):
     # This method should return a list of tuples
     # from an sql execution
     #### YOUR CODE HERE
-def username(self, id):
+    def username(self, id):
         # Query 4
         # Write an SQL query
         # that selects an employees full name
@@ -56,8 +55,7 @@ def username(self, id):
                 FROM employee
                 WHERE employee_id = {id}
                 """
-        return execute_sql(query)
-
+        return self.query(query)
 
 
     # Below is method with an SQL query
@@ -68,10 +66,10 @@ def username(self, id):
     # is returns containing the execution of
     # the sql query
     #### YOUR CODE HERE
-        def model_data(self, id):
+    def model_data(self, id):
             query = f"""
                     SELECT SUM(positive_events) AS Positive_events , SUM(negative_events) AS Negative_events
                     FROM employee_events
                     WHERE employee_id = {id}
                 """
-        return pd.read_sql_query(query, create_connection())
+            return self.pandas_query(query)
