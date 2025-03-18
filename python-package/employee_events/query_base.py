@@ -49,7 +49,8 @@ class QueryBase(QueryMixin):
             GROUP BY event_date
             ORDER BY event_date
         """
-        return pd.read_sql_query(query, create_connection())
+        return self.pandas_query(query)
+
     # Define a `notes` method that receives an id argument
     # This function should return a pandas dataframe
     # YOUR CODE HERE
