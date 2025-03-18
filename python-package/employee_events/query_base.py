@@ -69,4 +69,4 @@ class QueryBase(QueryMixin):
                         ON {self.name}.{self.name}_id = notes.{self.name}_id
                         WHERE {self.name}.{self.name}_id = {id}
                 """
-        return self.run_query_df(query)
+        return self.pandas_query(query)
