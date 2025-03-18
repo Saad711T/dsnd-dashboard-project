@@ -7,4 +7,7 @@ pandas==2.2.3
 pytest
 flake8
 ipython
+sqlite3
+pathlib
+-e ./python-package
 #### Add text to install the python-package here

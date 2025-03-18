@@ -3,3 +3,5 @@ from .dropdown import Dropdown
 from .radio import Radio
 from .matplotlib_viz import MatplotlibViz
 from .data_table import DataTable
+
+all = [BaseComponent, Dropdown, Radio, MatplotlibViz, DataTable]
